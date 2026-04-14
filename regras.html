@@ -18,8 +18,10 @@
   --copper:#b87333;--copper2:#d4904a;--bronze:#8b6914;
   --brass:#c9a227;--brass2:#f0c040;--rust:#7a3b1e;
   --metal:#2a1c0a;--metal2:#3d2a12;--metal3:#5c4020;
-  --gem-g:#00e676;--gem-b:#29b6f6;--gem-a:#ffab40;
-  --glow-g:rgba(0,230,118,.55);--glow-b:rgba(41,182,246,.55);--glow-a:rgba(255,171,64,.55);
+  --gem-r:#ff2020;--gem-o:#ff8c00;--gem-y:#ffe600;--gem-g:#00e676;--gem-c:#29b6f6;--gem-i:#3f51b5;--gem-v:#9c27b0;
+  --glow-r:rgba(255,32,32,.6);--glow-o:rgba(255,140,0,.6);--glow-y:rgba(255,230,0,.6);--glow-g:rgba(0,230,118,.55);--glow-c:rgba(41,182,246,.55);--glow-i:rgba(63,81,181,.6);--glow-v:rgba(156,39,176,.6);
+  --gem-b:#29b6f6;--gem-a:#ffab40;
+  --glow-b:rgba(41,182,246,.55);--glow-a:rgba(255,171,64,.55);
   --ff-display:'Rye',serif;
   --ff-body:'IM Fell English',serif;
   --ff-label:'Special Elite',serif;
@@ -31,7 +33,6 @@ body{
   background:var(--p0);color:var(--ink);
   font-family:var(--ff-body);font-size:1.05rem;line-height:1.8;
   overflow-x:hidden;
-  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18'%3E%3Ccircle cx='9' cy='9' r='3.5' fill='%23b87333'/%3E%3Ccircle cx='9' cy='9' r='7' fill='none' stroke='%23b87333' stroke-width='1.2' opacity='.5'/%3E%3C/svg%3E") 9 9,crosshair;
 }
 body::after{
   content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
@@ -111,8 +112,14 @@ body::after{
 .pb-sub{font-style:italic;color:var(--p3);font-size:1.05rem;max-width:520px;margin:0 auto}
 .pb-gems{display:flex;justify-content:center;gap:1.5rem;margin-top:2rem}
 .gem-dot{width:10px;height:10px;border-radius:50%}
+.gd-r{background:var(--gem-r);box-shadow:0 0 8px var(--glow-r);animation:gpulse 3s ease-in-out infinite}
+.gd-o{background:var(--gem-o);box-shadow:0 0 8px var(--glow-o);animation:gpulse 3s ease-in-out infinite .43s}
+.gd-y{background:var(--gem-y);box-shadow:0 0 8px var(--glow-y);animation:gpulse 3s ease-in-out infinite .86s}
+.gd-g{background:var(--gem-g);box-shadow:0 0 8px var(--glow-g);animation:gpulse 3s ease-in-out infinite 1.29s}
+.gd-c{background:var(--gem-c);box-shadow:0 0 8px var(--glow-c);animation:gpulse 3s ease-in-out infinite 1.72s}
+.gd-i{background:var(--gem-i);box-shadow:0 0 8px var(--glow-i);animation:gpulse 3s ease-in-out infinite 2.15s}
+.gd-v{background:var(--gem-v);box-shadow:0 0 8px var(--glow-v);animation:gpulse 3s ease-in-out infinite 2.57s}
 .gd-b{background:var(--gem-b);box-shadow:0 0 8px var(--glow-b);animation:gpulse 3s ease-in-out infinite}
-.gd-g{background:var(--gem-g);box-shadow:0 0 8px var(--glow-g);animation:gpulse 3s ease-in-out infinite 1s}
 .gd-a{background:var(--gem-a);box-shadow:0 0 8px var(--glow-a);animation:gpulse 3s ease-in-out infinite 2s}
 @keyframes gpulse{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.4)}}
 
@@ -200,7 +207,7 @@ body::after{
 .tls-img-slot::before{content:'◉ ◉';color:var(--copper);font-size:.8rem;position:absolute;top:.5rem;left:.5rem;right:.5rem;display:flex;justify-content:space-between;opacity:.4;pointer-events:none}
 .tls-img-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none}
 .tls-img-sub{
-  width:55%;aspect-ratio:3/2;margin-top:-2rem;margin-left:auto;margin-right:1.5rem;
+  width:55%;aspect-ratio:3/2;margin-top:1rem;margin-left:auto;margin-right:1.5rem;
   border:2px solid var(--p3);border-top:3px solid var(--copper);
   background:var(--p1);
   display:flex;align-items:center;justify-content:center;
@@ -388,7 +395,7 @@ body::after{
     <div class="pb-eyebrow">Mecânicas de Jogo</div>
     <h1 class="pb-title">Regras</h1>
     <p class="pb-sub">Fácil de aprender — profundo de dominar</p>
-    <div class="pb-gems"><div class="gem-dot gd-b"></div><div class="gem-dot gd-g"></div><div class="gem-dot gd-a"></div></div>
+    <div class="pb-gems"><div class="gem-dot gd-r"></div><div class="gem-dot gd-o"></div><div class="gem-dot gd-y"></div><div class="gem-dot gd-g"></div><div class="gem-dot gd-c"></div><div class="gem-dot gd-i"></div><div class="gem-dot gd-v"></div></div>
   </div>
 </div>
 <section class="sec sec-light">
